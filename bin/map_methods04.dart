@@ -8,6 +8,12 @@ void main() {
 }
 
 Map func(Map data) {
+  String s = data['password'];
+  for (int i = 0; i < s.length; i++) {
+    if (s[i] == '@') {
+      return data;
+    }
+  }
   data['password'] = data['password'] + '@';
   //your code here
 
